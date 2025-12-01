@@ -29,15 +29,15 @@ Implementar un sistema de detección automática de placas vehiculares usando YO
 
 Primero creamos la instancia EC2 en AWS.
 
-![Creación de instancia EC2](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/creacion_ec2.png)
+![Creación de instancia EC2](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/creacion_ec2.png)
 
 Habilitamos el puerto 8080 en el Security Group para poder acceder a la API FastAPI que se implementará más adelante.
 
-![Habilitación de puerto 8080](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/habilitacion_puerto_8080.png)
+![Habilitación de puerto 8080](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/habilitacion_puerto_8080.png)
 
 Verificamos la IP, el estado y el DNS de la instancia.
 
-![Verificación de instancia EC2](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/verificacion_ec2.png)
+![Verificación de instancia EC2](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/verificacion_ec2.png)
 
 #### Conexión a la instancia EC2 vía SSH
 
@@ -45,13 +45,13 @@ Por costumbre de Juan Quintero, se decidió usar un .pem para la conexión SSH. 
 
 Tuvimos que cambiar los permisos del archivo `.pem` para que solo el usuario tenga permisos de lectura.
 
-![Intento fallido por permisos](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/primer_intento_fallido.png)
+![Intento fallido por permisos](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/primer_intento_fallido.png)
 
 ```bash
 chmod 400 mgads-yolov8.pem
 ```
 
-![Conexión exitosa vía SSH](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/conexion_exitosa_ssh.png)
+![Conexión exitosa vía SSH](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/conexion_exitosa_ssh.png)
 
 #### Instalación de dependencias en la instancia EC2
 
@@ -94,7 +94,7 @@ ls -la
 vim app.py
 ```
 
-![Verificación de archivos en EC2](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/›.png)
+![Verificación de archivos en EC2](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/›.png)
 
 #### Ejecución de la API FastAPI en la instancia EC2
 
@@ -105,21 +105,21 @@ Ejecutamos la API usando FastAPI.
 python app.py
 ```
 
-![Ejecución de API FastAPI](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/ejecucion_api_fastapi.png)
+![Ejecución de API FastAPI](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/ejecucion_api_fastapi.png)
 
 #### Pruebas de la API FastAPI
 
 Entramos al endpoint de documentación: <http://35.171.244.166:8080/docs>
 
-![Documentación FastAPI](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/documentacion_fastapi.png)
+![Documentación FastAPI](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/documentacion_fastapi.png)
 
 Probamos la API subiendo una imagen de prueba.
 
-![Imagen de prueba](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/carroprueba.png)
+![Imagen de prueba](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/carroprueba.png)
 
-![Prueba de API FastAPI](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/prueba_fastapi.png)
+![Prueba de API FastAPI](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/prueba_fastapi.png)
 
-![Respuesta de la API FastAPI](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/respuesta_fastapi.png)
+![Respuesta de la API FastAPI](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/respuesta_fastapi.png)
 
 #### Ejecutar aplicación móvil localmente
 
@@ -169,9 +169,9 @@ Tuvimos que realizar unos ajustes en el código para que la aplicación móvil f
 
 Ejecutamos `npx expo start --web` y abrimos `http://localhost:8081/`
 
-![Aplicación móvil funcionando](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/aplicacion_movil_funcionando.png)
+![Aplicación móvil funcionando](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/aplicacion_movil_funcionando.png)
 
-![Respuesta de la API en la aplicación móvil](https://github.com/juedquipa/mgads-yolov8/imagenes/evidencias/respuesta_api_aplicacion_movil.png)
+![Respuesta de la API en la aplicación móvil](https://raw.githubusercontent.com/IngDanielleon/detector-placas/refs/heads/main/imagenes/evidencias/respuesta_api_aplicacion_movil.png)
 
 ### Conclusiones
 
